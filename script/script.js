@@ -109,6 +109,14 @@ topMenuEl.addEventListener("click", function (e) {
     subMenuEl.style.top = "0";
     subMenuEl.innerHTML = "";
   }
+
+  mainEl.innerHTML = `<h1>${e.target.textContent}</h1>`;
+
+  if (e.target.textContent === "about") {
+    mainEl.innerHTML = `<h1>About</h1>`;
+  }
+
+
 });
 
 function buildSubmenu(subLinks) {
@@ -120,6 +128,3 @@ function buildSubmenu(subLinks) {
     subMenuEl.appendChild(newLink);
   });
 }
-
-
-
